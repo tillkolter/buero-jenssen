@@ -1,4 +1,4 @@
-<div class="col-4 blog-main">
+<div class="col-lg-4 col-md-6 col-12 blog-main">
 <div onclick="onOpenGallery(this)" class="project-item <?php echo get_random_blog_entry_class() ?>">
   <div class="project-item-image">
     <div class="project-item-infos">
@@ -12,7 +12,14 @@
             <div class="project-item-venue"><?php the_field('venue')?></div>
             <div class="project-item-city"><?php the_field('city') ?></div>
           </div>
-          <div class="project-item-date"><?php echo date('F Y', strtotime(get_field('date')))?></div>
+          <div class="project-item-date">
+            <?php
+            $date = get_field('date');
+            if ($date) {
+              echo date('F Y', strtotime($date));
+            }
+            ?>
+          </div>
         </div>
       </div>
     </div>

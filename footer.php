@@ -14,7 +14,7 @@
 
     <!-- Background of PhotoSwipe.
          It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
+    <div class="pswp__bg" id="pswp__bg"></div>
 
     <!-- Slides wrapper with overflow:hidden. -->
     <div class="pswp__scroll-wrap">

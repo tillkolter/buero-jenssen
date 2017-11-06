@@ -32,7 +32,7 @@ var openPhotoSwipe = function(element) {
       return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
     },
     showHideOpacity: true,
-    bgOpacity: .8,
+    bgOpacity: .7,
     closeEl:true,
     captionEl: true,
     fullscreenEl: true,
@@ -42,6 +42,12 @@ var openPhotoSwipe = function(element) {
     arrowEl: true,
     preloaderEl: true
   };
+
+  let bgElement = document.getElementById('pswp__bg')
+  let sheet = document.createElement('style')
+
+  let elementStyle = window.getComputedStyle(element)
+  bgElement.style.backgroundColor = elementStyle.backgroundColor
 
   var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
   gallery.init();
