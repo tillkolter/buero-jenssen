@@ -124,6 +124,12 @@ body {
             background-color: lighten(#ffff47, 10);
           }
         }
+        &.green {
+          background-color: #4ca028;
+          &:hover {
+            background-color: lighten(#4ca028, 10)
+          }
+        }
     }
 }
 .maincontent {

@@ -21,7 +21,7 @@ function echo_first_image( $postID ) {
 }
 
 function get_random_blog_entry_class () {
-  $items = array('red', 'blue', 'yellow');
+  $items = array('red', 'blue', 'yellow', 'green');
   return $items[array_rand($items)];
 }
 
