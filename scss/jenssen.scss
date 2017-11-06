@@ -1,0 +1,135 @@
+$brand-color-black: black;
+$brand-color-violet: #660066;
+
+$font-size-h1: 8rem;
+$font-size-h2: 4rem;
+$font-size-h3: 2rem;
+$font-size-h4: 1rem;
+$font-size-h5: .85rem;
+
+$font-size-sm: .75rem;
+
+body {
+  background-color: #fffbd8;
+}
+
+.claim {
+    font-size: $font-size-h3 !important;
+    color: $brand-color-violet;
+}
+
+.blog {
+    &-title {
+        font-size: $font-size-h1;
+        a {
+            color: $brand-color-black;
+            &:hover {
+                color: $brand-color-violet;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.project {
+    &-item {
+        position: relative;
+        width: 100%;
+        padding: 2rem;
+        &-infos {
+          padding: 1rem;
+          color: #fff;
+          visibility: hidden;
+          z-index: 2;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          .inner {
+            position: relative;
+            height: 100%;
+            width: 100%;
+          }
+        }
+        &-title {
+          font-size: $font-size-h3;
+          height: 2.4 * $font-size-h3;
+          line-height: 1.1 * $font-size-h3;
+        }
+        &-bottom {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          font-size: $font-size-sm;
+        }
+        &-date {
+          margin-top: auto;
+        }
+        &:hover {
+            * .project-item-infos {
+                visibility: visible;
+            }
+            cursor: pointer;
+        }
+        &:after {
+            position: absolute;
+            background-color: black;
+            top: 0;
+            left: 0;
+        }
+        &-image {
+            z-index: 1;
+            width: 225px;
+            height: 225px;
+            display: -ms-flexbox;
+            display: flex;
+            position: relative;
+            overflow: hidden;
+            margin: auto;
+            -moz-box-shadow:    inset 0 0 10px #000000;
+            -webkit-box-shadow: inset 0 0 10px #000000;
+            box-shadow:         inset 0 0 10px #000000;
+        }
+        img {
+          position: absolute;
+          margin: auto;
+          width: auto;
+          min-height: 100%;
+          min-width: 100%;
+          left: -100%;
+          right: -100%;
+          top: -100%;
+          bottom: -100%;
+        }
+        &.red {
+          background-color: #ed490e;
+          &:hover {
+            background-color: lighten(#ed490e, 10);
+          }
+        }
+        &.blue {
+          background-color: #0d93ed;
+          &:hover {
+            background-color: lighten(#0d93ed, 10);
+          }
+        }
+        &.yellow {
+          background-color: #ffff47;
+          &:hover {
+            background-color: lighten(#ffff47, 10);
+          }
+        }
+    }
+}
+.maincontent {
+  background: black;
+}
+
+.hidden {
+  display: none;
+}
